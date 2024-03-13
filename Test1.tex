@@ -1,0 +1,409 @@
+import java.util.Arrays;
+ class Taj{
+
+    static String name = "7 Season";
+    static String foodItems[] = {null , null , null};
+    static String ownerName = "Salman & team";
+    static String address = "Mumbai";
+    static int index;
+	
+         
+
+	public static boolean addFoodItems(String foodItem){
+       // "Akki Rotti" != null
+	    System.out.println("inside addFoodItems():");
+        System.out.println();
+		boolean isAdded = false;
+		if(foodItem != null){
+		//code
+		     // foodItems[0] = "Akki Rotti";
+			    foodItems[index] = foodItem;
+				index++ ;
+				
+					isAdded = true;
+					System.out.println("Food Item added Successfully...");
+					}
+					else
+					{
+					System.out.println("Food Item can't be null");
+					
+					}
+					System.out.println("End of addFoodItems():");
+				  return isAdded;
+	}
+		
+    public static void getFoodItems(){
+    for(int index = 0; index < foodItems.length; index++){
+           System.out.println(foodItems[index]);
+
+	}
+
+  }
+  
+   public static boolean updateFoodItem(String newFoodItem , String oldFoodItem){
+	  
+	         boolean isUpdated = false;
+		for(int pos=0 ; pos < foodItems.length ; pos++){
+
+            //if			
+			  // "Roti" == "Roti"
+			   if(foodItems[pos] == oldFoodItem){
+				  foodItems[0] = "Lemon Chicken";
+
+                       isUpdated = true ;
+			   
+			   }
+         
+     
+            }	
+        }
+           // return isUpdated ;
+        
+			public static void deleteFoodItem(String foodItem){
+			
+			// looping the food items from array(foodItems)
+			int newIndex,oldIndex;
+			for(newIndex=0; oldIndex=0; oldIndex<foodItem.length; oldIndex++){
+			if(foodItems[oldIndex]!= foodItem){
+			foodItem[newIndex++] = foodItem[oldIndex];
+			}
+	}
+
+         foodItem = Array.copyof(foodItem,newIndex);
+         return ;
+
+      }
+	  
+ }			
+	
+    
+  	class TajTester{
+               public static void main(String foodItems1[]){
+				 
+                Taj.addFoodItems("Roti");
+				Taj.addFoodItems("Curd Rice");
+				Taj.addFoodItems("Veg Pakoda");
+           
+
+			 Taj.getFoodItems();
+			 
+			 
+		boolean isUpdated = Taj.updateFoodItem("Lemon Chicken", "Roti");
+		System.out.println(isUpdated);		 
+		Taj.getFoodItems();
+		
+		
+		Taj.deleteFoodItems("Roti");
+		Taj.getFoodItems();
+			
+			   }		
+				
+}			
+			
+
+
+2)class	- class means refrence of object
+
+   class Bike {
+   public static void main(String[] args) {
+    System.out.println("Royal Enfield");
+  }
+}
+
+*)boolean keyword is used to define boolean type variables. boolean type variables can hold only two values – either true or false.
+
+ex;- boolean isActive = true;
+
+      2)byte keyword is used to declare byte type of variables. A byte variable can hold a numeric value in the range from -128 to 127.
+
+      1byte b = 50;
+
+3)char - keyword is used to declare primitive char type variables. char represents the characters in java.
+
+        char a = 'A';
+         
+        char b = 'B';
+         
+        char c = 'C';
+
+		
+4)double - keyword is used to declare primitive double type of variables.
+class Number
+{
+    public static void main(String[] args) 
+    {
+        double d1 = 23.56;
+         
+        double d2 = 56.23;
+         
+        double d3 = d1 + d2;
+         
+        System.out.println(d3);
+    }
+}
+
+
+
+5)for - loop is used to execute the set of statements until a condition is true.
+
+class Xyz
+{
+    public static void main(String[] args) 
+    {
+        for (int i = 0; i <= 10; i++)
+        {
+            System.out.println(i);
+        }
+    }
+}
+
+6) int - int keyword is used to declare primitive integer type of variables.
+
+
+    class {
+    public static void main(String[] args) 
+    {
+        int i1 = 10;
+         
+        int i2 = 20;
+         
+        int i3 = i1 *  i2;
+         
+        System.out.println(i3);
+    }
+}
+
+7)long - long is used to define the primitive long type variables.
+
+class {
+    public static void main(String[] args) 
+    {
+        long l1 = 101;
+         
+        long l2 = 202;
+         
+        long l3 = l1 +  l2;
+         
+        System.out.println(l3);
+    }
+}
+
+8)short - short keyword is used to declare primitive short type variables.
+    short s1 = 11;
+         
+    short s2 = 22;
+	
+	
+9)void - void keyword is used to indicate that method returns nothing.
+
+class A
+{
+    void methodReturnsNothing(){
+    }
+}
+
+
+
+10)return - return keyword is used to return the control back to the caller from the method.
+
+class A
+{
+    int method(int i)
+    {
+        return i*i;    
+    }
+}
+
+
+
+ 4. What is variable? Explain its type with example
+ 
+Variable: It is a container used to store value/data which can be used in the later stages of the  program
+
+
+There are three types of variables in Java:
+
+local variable
+instance variable
+static variable
+
+
+
+1) Local Variable
+A variable declared inside the body of the method is called local variable. You can use this variable only within that method and the other methods in the class aren't even aware that the variable exists.
+
+A local variable cannot be defined with "static" keyword.
+
+2) Instance Variable
+A variable declared inside the class but outside the body of the method, is called an instance variable. It is not declared as static.
+
+class Pen{
+
+    String color;
+	String type;
+	String name;
+	String shape;
+	
+	
+	public void write(){
+	System.out.println("Using pen we used to write a book ");
+	
+	
+	}
+
+
+It is called an instance variable because its value is instance-specific and is not shared among instances.
+
+3) Static variable
+A variable that is declared as static is called a static variable. It cannot be local. You can create a single copy of the static variable and share it among all the instances of the class. Memory allocation for static variables happens only once when the class is loaded in the memory.
+
+class B
+
+public static void main {
+System.out.println("result");	
+	
+}
+
+
+4) Parameter varaiable
+Parameters in Java are variables that are passed into methods or constructors, such as the name parameter in, public void greet(String name). They are the data that methods and constructors need to perform their tasks. Here’s a simple example:
+
+
+ex;-public void greet(String name) {
+    System.out.println('Hello, ' + name);
+}
+
+
+5. List the difference between primitive and non-primitive datatypes
+
+
+Primitive datatype - the data structure that allows you to store only single data type values
+
+                   - integer, boolean, character, float, etc. are some examples of primitive data structures.	
+
+                   - Primitive data structure always contains some value i.e. these data structures do not allow you to store NULL values.	
+				   
+				   - The size of the primitive data structures is dependent on the type of the primitive data structure.	
+				   
+				   
+				   
+				   
+Non Primitive datatype - Non-Primitive data structure is a data structure that allows you to store multiple data type values.
+				   
+				   
+				       - Array, Linked List, Stack, etc. are some examples of non-primitive data structures.
+
+                       - You can store a NULL value in the non-primitive data structures.
+
+                        - The size of the non-primitive data structure is not fixed.
+						
+						
+						
+						
+						6. Explain:
+                                       Identifier- name given in java called identifier
+									   
+									   A Java identifier is a name given to a package, class, interface, method, or variable. It allows a programmer to refer to the item from other places in the program.
+
+                                       To make the most out of the identifiers you choose, make them meaningful and follow the standard Java naming conventions.
+
+                                       ex;-  int weight = 300;
+
+
+                                       Keyword - keywords are pre defined/special words/builit in words with specific meaning 
+									   
+									   Java keywords are also known as reserved words. Keywords are particular words that act as a key to a code. These are predefined words by Java so they cannot be used as a variable or object name or class name.
+                                       there are 50+3(true,false,null)
+
+									   
+									   abstract	A non-access modifier. Used for classes and methods: An abstract class cannot be used to create objects (to access it, it must be inherited from another class). An abstract method can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from)
+
+                                        boolean	A data type that can only store true or false values
+                                        byte	A data type that can store whole numbers from -128 and 127
+
+
+
+									  literals - value in java called literals
+   
+											Literals in Java
+											Integral Literals
+											Floating-Point Literals
+											Char Literals
+											String Literals
+											Boolean Literals
+											Null Literals
+											
+											
+											
+                                     Method over loading - method over loading is declaring two method in a same class or same method name diffrent parameters there
+											
+
+											Ivoid function1(double a) { ... }
+											void function1(int a, int b, double c) { ... }
+											float function1(float a) { ...}
+											double function1(int a, float b) { ... }
+
+									   
+									   class Abc {
+										   
+										   String add();
+										   
+										   public static void add(){
+											   
+											   
+										   }
+									   }
+									   
+									   
+									   8.How do you write an infinite loop using the for statement?
+									   
+									   A for loop is only another syntax for a while loop. Everything which is possible with one of them is also possible with the other one.
+                                       Any for loop where the  termination condition can never be met will be infinite: for($i = 0; $i > -1; $i++) { ... } – 
+
+									   for(int index=0; index>number.length-1; index++){
+										   
+									   }
+									   
+									   
+				                      9. How do you write an infinite loop using the while statement?
+                                   
+								   
+								      A while loop will continue to repeat as long as a specified condition is met. It checks for the condition before running the loop code.
+
+									  
+									  
+									  
+								 10.10. Explain the main method ? public static void main(String args[])]
+
+
+                                   The public static void main(String[] args) method plays a crucial role in Java programming. It serves as the entry point for any Java program and is the first method that gets executed when a Java application starts.
+
+									The JVM initiates the program by calling the main method. If the main method is not defined in your program, or if it’s defined with a different signature, the JVM will throw an error, and the program won’t run.
+
+									Understanding the public static void main(String[] args) method is fundamental to mastering Java, as it’s the starting point for learning how to build applications in this versatile language.
+									
+
+									Method	Accessibility	Returns a Value	Name	Arguments
+									public	Accessible anywhere	void (No return value)	main	String[] args (Command-line arguments)
+
+
+
+
+								3) You are given a large integer represented as an integer array of digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
+										Increment the large integer by one and return the resulting array of digits.
+
+										 class Solution {  
+											public int[] plusOne(int[] digits) {  
+												int num = 0;  
+												for (int a : digits) {  
+													num = 10*num + a;  
+												}  
+												int n=num+1;  
+												String str=String.valueOf(n);  
+												int arr[]=new int[str.length()];  
+												for(int i=0;i<str.length();i++){  
+													arr[i]=str.charAt(i)-'0';  
+												}  
+												return arr;  
+											}
+										}
